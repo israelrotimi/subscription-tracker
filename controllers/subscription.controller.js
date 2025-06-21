@@ -29,28 +29,28 @@ export const getUserSubscriptions = async (req, res, next) => {
         next(error);
     }
 }
-export const updateSubscription = async (req, res, next) => {
-    try {
-        const subscription = await Subscription.create({
-            ...req.body,
-            user: req.user._id
-        });
+// export const updateSubscription = async (req, res, next) => {
+//     try {
+//         const subscription = await Subscription.create({
+//             ...req.body,
+//             user: req.user._id
+//         });
 
-        res.status(201).json({ success: true, data: subscription });
-    } catch (error) {
-        next(error);
-    }
-}
+//         res.status(201).json({ success: true, data: subscription });
+//     } catch (error) {
+//         next(error);
+//     }
+// }
 
-export const cancelSubscription = async (req, res, next) => {
-    try {
-        const subscription = await Subscription.create({
-            ...req.body,
-            user: req.user._id
-        });
+// export const cancelSubscription = async (req, res, next) => {
+//     try {
+//         const subscription = await Subscription.create({
+//             ...req.body,
+//             user: req.user._id
+//         });
 
-        res.status(201).json({ success: true, data: subscription });
-    } catch (error) {
-        next(error);
-    }
-}
+//         res.status(201).json({ success: true, data: subscription });
+//     } catch (error) {
+//         next(error);
+//     }
+// }

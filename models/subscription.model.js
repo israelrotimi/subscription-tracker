@@ -1,4 +1,4 @@
-import {Schema, Model} from "mongoose";
+import {Schema, model} from "mongoose";
 
 const subscriptionSchema = new Schema({
     name: {
@@ -79,6 +79,6 @@ subscriptionSchema.pre("save", function(next) {
     next();
 })
 
-const Subscription = new Model("Subscription", subscriptionSchema);
+const Subscription = new model("Subscription", subscriptionSchema);
 
 export default Subscription
